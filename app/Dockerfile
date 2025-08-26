@@ -11,9 +11,6 @@ WORKDIR /app
 # Copy pom.xml separately to leverage layer caching for dependencies
 COPY pom.xml .
 
-# Pre-download all dependencies to speed up future builds
-RUN mvn dependency:go-offline
-
 # Copy full source code and build the WAR file (skip tests for speed)
 COPY src/ ./src/
 RUN mvn clean package -DskipTests
