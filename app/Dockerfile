@@ -28,7 +28,7 @@ WORKDIR /usr/local/tomcat
 RUN rm -rf webapps/*
 
 # Copy the WAR file built in the previous stage into ROOT.war (auto-deployed by Tomcat)
-COPY --from=builder /app/target/vprofile.war webapps/ROOT.war
+COPY --from=builder /app/target/vprofile-v2.war webapps/ROOT.war
 
 # Expose default Tomcat port
 EXPOSE 8080
