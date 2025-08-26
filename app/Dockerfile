@@ -13,7 +13,7 @@ COPY pom.xml .
 
 # Copy full source code and build the WAR file (skip tests for speed)
 COPY src/ ./src/
-RUN mvn clean package -DskipTests
+RUN mvn install
 
 
 # ------------------------------
