@@ -21,8 +21,6 @@ RUN mvn install
 # ------------------------------
 FROM tomcat:10-jdk21
 
-#FROM tomcat:10.1-jdk21-temurin
-
 # Set working directory inside the runtime container
 WORKDIR /usr/local/tomcat
 
